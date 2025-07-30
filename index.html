@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>⛔̶T̶̶O̶̶D̶̶O̶ ̶O̶̶N̶̶L̶̶Y̶̶F̶̶A̶̶N̶̶S̶ ̶X̶̶X̶̶X̶🔞</title>
+  <title>⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
@@ -24,8 +24,6 @@
       height: 44px;
       border-radius: 50%;
       margin-right: 12px;
-      user-select: none;
-      pointer-events: none;
     }
     .group-name {
       font-size: 17px;
@@ -52,25 +50,14 @@
       height: 40px;
       border-radius: 50%;
       margin-right: 10px;
-      background-color: #555;
       overflow: hidden;
       flex-shrink: 0;
-      user-select: none;
-      pointer-events: none;
     }
     .avatar img {
-      width: 100%;
-      height: 100%;
+      width: 40px;
+      height: 40px;
       object-fit: cover;
-    }
-    .avatar.empty {
-      background-color: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #999;
-      font-weight: bold;
-      font-size: 18px;
+      border-radius: 50%;
     }
     .bubble {
       background-color: #2e3a48;
@@ -81,13 +68,10 @@
       line-height: 1.4;
       word-break: break-word;
       box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-      position: relative;
     }
     .spoiler {
       filter: blur(10px);
       cursor: pointer;
-      user-select: none;
-      pointer-events: auto;
       transition: filter 0.3s ease;
       border-radius: 10px;
       max-width: 100%;
@@ -104,7 +88,6 @@
       background: #1f1f26;
       text-align: center;
       padding: 10px 15px;
-      user-select: none;
       z-index: 10;
     }
     .share-btn, .send-btn, .verify-btn {
@@ -116,24 +99,18 @@
       color: white;
       cursor: pointer;
       margin-top: 8px;
-      user-select: none;
       box-shadow: 0 0 10px rgba(0,168,132,0.7);
-      transition: background 0.3s ease;
     }
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
     #lockedMsg {
       color: #ff4b4b;
       font-weight: bold;
       text-transform: uppercase;
-      user-select: none;
       margin-bottom: 8px;
     }
     #steps {
       font-size: 13px;
       color: white;
-      user-select: none;
       line-height: 1.3;
     }
     #accessGranted {
@@ -143,7 +120,6 @@
       text-align:center;
       padding:10px;
       font-weight:bold;
-      user-select:none;
       position: fixed;
       bottom: 60px;
       width: 100%;
@@ -162,7 +138,6 @@
       font-size: 14px;
       color: white;
       cursor: pointer;
-      user-select: none;
       box-shadow: 0 0 10px rgba(0,128,0,0.7);
     }
     .video-info {
@@ -173,11 +148,10 @@
   </style>
 </head>
 <body oncontextmenu="return false">
-
   <header>
     <img src="https://imageshack.com/i/poVuOPSPj" alt="Grupo" />
     <div>
-      <div class="group-name">⛔̶T̶̶O̶̶D̶̶O̶ ̶O̶̶N̶̶L̶̶Y̶̶F̶̶A̶̶N̶̶S̶ ̶X̶̶X̶̶X̶🔞</div>
+      <div class="group-name">⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</div>
       <div class="members-info">
         <span id="membersCount">183,200</span> miembros,
         <span id="onlineCount">2,652</span> en línea
@@ -186,90 +160,33 @@
   </header>
 
   <div class="chat-area" id="chatArea">
+    <!-- Mensajes del chat -->
     <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/poCyieVuj" alt="Cami" /></div>
-      <div class="bubble">
-        <strong>Cami 📹:</strong><br />
-        <img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" />
-        <div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div>
-      </div>
+      <div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" /></div>
+      <div class="bubble"><strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍</div>
     </div>
-
     <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" alt="Leo" /></div>
-      <div class="bubble">
-        <strong>Leo 🖥️:</strong><br />
-        <img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" />
-        <div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div>
-      </div>
+      <div class="avatar"><img src="https://imageshack.com/i/poQzsm34j" /></div>
+      <div class="bubble"><strong>Cami 📹:</strong><br><img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div></div>
     </div>
-
     <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" alt="Zuley" /></div>
-      <div class="bubble">
-        <strong>Zuley🔥:</strong><br />
-        <img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" />
-        <div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div>
-      </div>
+      <div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" /></div>
+      <div class="bubble"><strong>Leo 🖥️:</strong><br><img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div></div>
     </div>
-
     <div class="user">
-      <div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anónima" /></div>
-      <div class="bubble">
-        <strong>Anónima 😈:</strong><br />
-        <img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" />
-        <div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div>
-      </div>
+      <div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" /></div>
+      <div class="bubble"><strong>Zuley🔥:</strong><br><img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div></div>
     </div>
-
     <div class="user">
-      <div class="avatar empty" title="Sin foto">A</div>
-      <div class="bubble">
-        <strong>Andrés:</strong> ¿Alguien tiene el nuevo enlace actualizado?
-      </div>
+      <div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" /></div>
+      <div class="bubble"><strong>Anónima 😈:</strong><br><img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div></div>
     </div>
-
-    <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" alt="Sofía" /></div>
-      <div class="bubble">
-        <strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍
-      </div>
-    </div>
-
-    <div class="user">
-      <div class="avatar empty" title="Sin foto">M</div>
-      <div class="bubble">
-        <strong>Marcelo:</strong> ¿Alguien más tiene problemas para compartir el enlace?
-      </div>
-    </div>
-
-    <div class="user">
-      <div class="avatar"><img src="https://i.pravatar.cc/40?img=29" alt="Lisa" /></div>
-      <div class="bubble">
-        <strong>Lisa 💋:</strong> Súbanle, que esto apenas empieza 👀
-      </div>
-    </div>
-
-    <div class="user">
-      <div class="avatar"><img src="https://i.pravatar.cc/40?img=50" alt="Kevin" /></div>
-      <div class="bubble">
-        <strong>Kevin:</strong> ¿Ya pasaron las 3 veces? ¡Quiero ver el contenido!
-      </div>
-    </div>
-
-    <div class="user">
-      <div class="avatar empty" title="Sin foto">L</div>
-      <div class="bubble">
-        <strong>Lucía:</strong> Estoy enviando las capturas ahora mismo 📸
-      </div>
-    </div>
-
-    <div class="user">
-      <div class="avatar"><img src="https://i.pravatar.cc/40?img=45" alt="Dimitri" /></div>
-      <div class="bubble">
-        <strong>Dimitri:</strong> ¡Funciona! Acabo de entrar, gracias por compartir
-      </div>
-    </div>
+    <div class="user"><div class="avatar empty">A</div><div class="bubble"><strong>Andrés:</strong> ¿Alguien tiene el nuevo enlace actualizado?</div></div>
+    <div class="user"><div class="avatar empty">M</div><div class="bubble"><strong>Marcelo:</strong> ¿Alguien más tiene problemas para compartir el enlace?</div></div>
+    <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=29" /></div><div class="bubble"><strong>Lisa 💋:</strong> Súbanle, que esto apenas empieza 👀</div></div>
+    <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=50" /></div><div class="bubble"><strong>Kevin:</strong> ¿Ya pasaron las 3 veces? ¡Quiero ver el contenido!</div></div>
+    <div class="user"><div class="avatar empty">L</div><div class="bubble"><strong>Lucía:</strong> Estoy enviando las capturas ahora mismo 📸</div></div>
+    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn40wemoj" /></div><div class="bubble"><strong>Dimitri:</strong> ¡Funciona! Acabo de entrar, gracias por compartir</div></div>
   </div>
 
   <div class="footer" id="footer">
@@ -287,7 +204,7 @@
   </div>
 
   <div id="accessGranted">Acceso concedido 😎🔥</div>
-  <button id="joinBtn" class="share-btn"><i class="fab fa-telegram-plane"></i> Unirme al grupo</button>
+  <button id="joinBtn"><i class="fab fa-telegram-plane"></i> Unirme al grupo</button>
 
   <script>
     let shared = 0;
@@ -327,7 +244,7 @@
       shared++;
       counter.textContent = shared;
       startTimer();
-      window.open("https://t.me/share/url?url=🔥🔞𝗦𝗢𝗟𝗢 𝗘𝗡𝗧𝗥𝗔𝗡 𝗟𝗢𝗦 𝗣𝗥𝗜𝗠𝗘𝗥𝗢𝗦 100 😈👉 https://t.me/Prohibid2Bot/XxX", "_blank");
+      window.open("https://t.me/share/url?url=https://t.me/Prohibid2Bot/XxX", "_blank");
       if (shared >= 3) {
         shareBtn.classList.add('hidden');
         sendBtn.classList.remove('hidden');
@@ -337,6 +254,7 @@
 
     sendBtn.onclick = () => {
       sendPressed = true;
+      window.open("https://t.me/VerifiCapBot", "_blank");
       sendBtn.textContent = "Enviando capturas...";
       sendBtn.disabled = true;
       setTimeout(() => {
