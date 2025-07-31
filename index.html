@@ -160,27 +160,11 @@
   </header>
 
   <div class="chat-area" id="chatArea">
-    <!-- Mensajes del chat -->
-    <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" /></div>
-      <div class="bubble"><strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍</div>
-    </div>
-    <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/poQzsm34j" /></div>
-      <div class="bubble"><strong>Cami 📹:</strong><br><img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div></div>
-    </div>
-    <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" /></div>
-      <div class="bubble"><strong>Leo 🖥️:</strong><br><img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div></div>
-    </div>
-    <div class="user">
-      <div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" /></div>
-      <div class="bubble"><strong>Zuley🔥:</strong><br><img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div></div>
-    </div>
-    <div class="user">
-      <div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" /></div>
-      <div class="bubble"><strong>Anónima 😈:</strong><br><img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div></div>
-    </div>
+    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" /></div><div class="bubble"><strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍</div></div>
+    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/poQzsm34j" /></div><div class="bubble"><strong>Cami 📹:</strong><br><img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div></div></div>
+    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" /></div><div class="bubble"><strong>Leo 🖥️:</strong><br><img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div></div></div>
+    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" /></div><div class="bubble"><strong>Zuley🔥:</strong><br><img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div></div></div>
+    <div class="user"><div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" /></div><div class="bubble"><strong>Anónima 😈:</strong><br><img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div></div></div>
     <div class="user"><div class="avatar empty">A</div><div class="bubble"><strong>Andrés:</strong> ¿Alguien tiene el nuevo enlace actualizado?</div></div>
     <div class="user"><div class="avatar empty">M</div><div class="bubble"><strong>Marcelo:</strong> ¿Alguien más tiene problemas para compartir el enlace?</div></div>
     <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=29" /></div><div class="bubble"><strong>Lisa 💋:</strong> Súbanle, que esto apenas empieza 👀</div></div>
@@ -201,6 +185,13 @@
     <button id="sendBtn" class="send-btn hidden">Enviar capturas</button>
     <button id="verifyBtn" class="verify-btn hidden">Verificar</button>
     <div id="timer">Tiempo restante: <span id="timeLeft">60</span> s</div>
+    <div id="timeoutMsg" style="display:none; color:#ff4b4b; font-weight:bold; margin-top:8px;">
+      ❌ Tiempo agotado. Por favor, actualiza la página para volver a intentarlo.
+      <br><br>
+      <button onclick="location.reload()" style="margin-top:8px; padding:8px 16px; background:#ff4b4b; color:white; border:none; border-radius:20px; cursor:pointer;">
+        🔄 Recargar página
+      </button>
+    </div>
   </div>
 
   <div id="accessGranted">Acceso concedido 😎🔥</div>
@@ -220,6 +211,7 @@
     const chatArea = document.getElementById('chatArea');
     const counter = document.getElementById('sharedCount');
     const timerEl = document.getElementById('timeLeft');
+    const timeoutMsg = document.getElementById('timeoutMsg');
     const counterBox = document.getElementById('counter');
     const footer = document.getElementById('footer');
     const joinBtn = document.getElementById('joinBtn');
@@ -232,9 +224,10 @@
         timeLeft--;
         timerEl.textContent = timeLeft;
         if (timeLeft <= 0) {
-          shareBtn.disabled = true;
-          shareBtn.style.cursor = "not-allowed";
           clearInterval(interval);
+          shareBtn.classList.add('hidden');
+          sendBtn.classList.add('hidden');
+          timeoutMsg.style.display = 'block';
         }
       }, 1000);
     }
@@ -287,4 +280,5 @@
     };
   </script>
 </body>
-</html>
+  </html>
+  
