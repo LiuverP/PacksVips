@@ -1,284 +1,260 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      background-color: #23232b;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      background-color: #2c3e50;
-      padding: 10px;
-    }
-    header img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      margin-right: 12px;
-    }
-    .group-name {
-      font-size: 17px;
-      font-weight: bold;
-    }
-    .members-info {
-      font-size: 13px;
-      color: #ccc;
-    }
-    .chat-area {
-      display: none;
-      flex-direction: column;
-      padding: 15px;
-      height: calc(100vh - 200px);
-      overflow-y: auto;
-    }
-    .user {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 14px;
-    }
-    .avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .avatar img {
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .bubble {
-      background-color: #2e3a48;
-      padding: 10px 14px;
-      border-radius: 12px;
-      max-width: 78%;
-      font-size: 13px;
-      line-height: 1.4;
-      word-break: break-word;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
-    .spoiler {
-      filter: blur(10px);
-      cursor: pointer;
-      transition: filter 0.3s ease;
-      border-radius: 10px;
-      max-width: 100%;
-      margin-top: 8px;
-      display: block;
-    }
-    .spoiler-unblurred {
-      filter: none !important;
-    }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #1f1f26;
-      text-align: center;
-      padding: 10px 15px;
-      z-index: 10;
-    }
-    .share-btn, .send-btn, .verify-btn {
-      background: #00a884;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 14px;
-      color: white;
-      cursor: pointer;
-      margin-top: 8px;
-      box-shadow: 0 0 10px rgba(0,168,132,0.7);
-    }
-    .hidden { display: none !important; }
-    #lockedMsg {
-      color: #ff4b4b;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    #steps {
-      font-size: 13px;
-      color: white;
-      line-height: 1.3;
-    }
-    #accessGranted {
-      display:none;
-      background:#00a884;
-      color:#fff;
-      text-align:center;
-      padding:10px;
-      font-weight:bold;
-      position: fixed;
-      bottom: 60px;
-      width: 100%;
-      box-shadow: 0 0 10px rgba(0,168,132,0.8);
-      z-index: 1000;
-    }
-    #joinBtn {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: green;
-      display: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 14px;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,128,0,0.7);
-    }
-    .video-info {
-      font-size: 12px;
-      color: #ccc;
-      margin-top: 4px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+body {
+  background-color: #23232b;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 10px;
+}
+header img { width: 44px; height: 44px; border-radius: 50%; margin-right: 12px; }
+.group-name { font-size: 17px; font-weight: bold; color: #fff; }
+.members-info { font-size: 13px; color: #ccc; }
+.chat-area {
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  background-color: #252536;
+}
+.user { display: flex; align-items: flex-start; margin-bottom: 14px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; overflow: hidden; flex-shrink: 0; }
+.avatar img { width: 40px; height: 40px; object-fit: cover; border-radius: 50%; }
+.bubble {
+  background-color: #2e3a48;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 78%;
+  font-size: 13px;
+  line-height: 1.4;
+  word-break: break-word;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: #fff;
+}
+.bubble strong { color: #ffd700; }
+.spoiler { filter: blur(10px); cursor: pointer; transition: filter 0.3s ease; border-radius: 10px; max-width: 100%; margin-top: 8px; display: block; }
+.spoiler-unblurred { filter: none !important; }
+.footer { position: fixed; bottom: 0; width: 100%; background: #1f1f26; text-align: center; padding: 10px 15px; z-index: 10; }
+.share-btn, .send-btn, .verify-btn, #videoBtn {
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,168,132,0.7);
+  transition: transform 0.2s ease;
+}
+.share-btn { 
+  background: #00a884;
+  font-size: 15px;
+  padding: 12px 25px;
+  font-weight: bold;
+}
+.send-btn, .verify-btn { font-size: 12px; padding: 8px 16px; margin-top: 5px; background: #00a884; }
+#videoBtn { 
+  display: none; 
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
+  font-size: 12px; 
+  padding: 8px 16px; 
+  background: orange; 
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(255,165,0,0.8);
+  z-index: 1001;
+  animation: pulse 1.5s infinite, sway 2s infinite alternate;
+  bottom: 65px;
+}
+#videoBtn.show { opacity: 1; }
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+@keyframes sway {
+  0% { transform: translateX(-52%) scale(1); }
+  50% { transform: translateX(-48%) scale(1); }
+  100% { transform: translateX(-52%) scale(1); }
+}
+.hidden { display: none !important; }
+#lockedMsg { color: #ff4b4b; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; }
+#steps { font-size: 13px; color: #fff; line-height: 1.3; }
+#accessGranted {
+  display:none;
+  background:#00a884;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-weight:bold;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,168,132,0.8);
+  z-index: 1000;
+}
+#joinBtn {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #008000;
+  display: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,128,0,0.7);
+}
+.video-info { font-size: 12px; color: #ccc; margin-top: 4px; }
+</style>
 </head>
 <body oncontextmenu="return false">
-  <header>
-    <img src="https://imageshack.com/i/poVuOPSPj" alt="Grupo" />
-    <div>
-      <div class="group-name">⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</div>
-      <div class="members-info">
-        <span id="membersCount">183,200</span> miembros,
-        <span id="onlineCount">2,652</span> en línea
-      </div>
-    </div>
-  </header>
 
-  <div class="chat-area" id="chatArea">
-    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" /></div><div class="bubble"><strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍</div></div>
-    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/poQzsm34j" /></div><div class="bubble"><strong>Cami 📹:</strong><br><img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div></div></div>
-    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" /></div><div class="bubble"><strong>Leo 🖥️:</strong><br><img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div></div></div>
-    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" /></div><div class="bubble"><strong>Zuley🔥:</strong><br><img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div></div></div>
-    <div class="user"><div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" /></div><div class="bubble"><strong>Anónima 😈:</strong><br><img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div></div></div>
-    <div class="user"><div class="avatar empty">A</div><div class="bubble"><strong>Andrés:</strong> ¿Alguien tiene el nuevo enlace actualizado?</div></div>
-    <div class="user"><div class="avatar empty">M</div><div class="bubble"><strong>Marcelo:</strong> ¿Alguien más tiene problemas para compartir el enlace?</div></div>
-    <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=29" /></div><div class="bubble"><strong>Lisa 💋:</strong> Súbanle, que esto apenas empieza 👀</div></div>
-    <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=50" /></div><div class="bubble"><strong>Kevin:</strong> ¿Ya pasaron las 3 veces? ¡Quiero ver el contenido!</div></div>
-    <div class="user"><div class="avatar empty">L</div><div class="bubble"><strong>Lucía:</strong> Estoy enviando las capturas ahora mismo 📸</div></div>
-    <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn40wemoj" /></div><div class="bubble"><strong>Dimitri:</strong> ¡Funciona! Acabo de entrar, gracias por compartir</div></div>
-  </div>
-
-  <div class="footer" id="footer">
-    <div id="lockedMsg">CHAT BLOQUEADO - DEBES COMPLETAR LOS PASOS</div>
-    <div id="steps">
-      1- Debes compartir el enlace 3 veces<br>
-      2- Debes enviar capturas del enlace compartido<br>
-      3- Verifica para ser aceptado
-    </div>
-    <div id="counter">Compartido: <span id="sharedCount">0</span>/3</div>
-    <button id="shareBtn" class="share-btn">Compartir en Telegram</button>
-    <button id="sendBtn" class="send-btn hidden">Enviar capturas</button>
-    <button id="verifyBtn" class="verify-btn hidden">Verificar</button>
-    <div id="timer">Tiempo restante: <span id="timeLeft">60</span> s</div>
-    <div id="timeoutMsg" style="display:none; color:#ff4b4b; font-weight:bold; margin-top:8px;">
-      ❌ Tiempo agotado. Por favor, actualiza la página para volver a intentarlo.
-      <br><br>
-      <button onclick="location.reload()" style="margin-top:8px; padding:8px 16px; background:#ff4b4b; color:white; border:none; border-radius:20px; cursor:pointer;">
-        🔄 Recargar página
-      </button>
+<header>
+  <img src="https://imageshack.com/i/poVuOPSPj" alt="Grupo" />
+  <div>
+    <div class="group-name">⛔️T̶O̶D̶O̶ ̶O̶N̶L̶Y̶F̶A̶N̶S̶ ̶X̶X̶X̶🔞</div>
+    <div class="members-info">
+      <span id="membersCount">183,200</span> miembros,
+      <span id="onlineCount">2,652</span> en línea
     </div>
   </div>
+</header>
 
-  <div id="accessGranted">Acceso concedido 😎🔥</div>
-  <button id="joinBtn"><i class="fab fa-telegram-plane"></i> Unirme al grupo</button>
+<div class="chat-area" id="chatArea">
+  <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn889Wqvj" /></div><div class="bubble"><strong>Sofía 🌸:</strong> Este grupo está 🔥, no puedo creer lo que vi anoche 😍</div></div>
+  <div class="user"><div class="avatar"><img src="https://imageshack.com/i/poQzsm34j" /></div><div class="bubble"><strong>Cami 📹:</strong><br><img src="https://imageshack.com/i/pnETG4bij" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 10.1 MB - 1:00</div></div></div>
+  <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn4lfHNkj" /></div><div class="bubble"><strong>Leo 🖥️:</strong><br><img src="https://imageshack.com/i/pnKIKKV9j" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 15.3 MB - 1:40</div></div></div>
+  <div class="user"><div class="avatar"><img src="https://imageshack.com/i/po3ShGxZj" /></div><div class="bubble"><strong>Zuley🔥:</strong><br><img src="https://imageshack.com/i/pnrwSA4ej" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 8.2 MB - 0:52</div></div></div>
+  <div class="user"><div class="avatar"><img src="https://randomuser.me/api/portraits/women/41.jpg" /></div><div class="bubble"><strong>Anónima 😈:</strong><br><img src="https://imageshack.com/i/poOUZ6IKj" class="spoiler" onclick="this.classList.toggle('spoiler-unblurred')" /><div class="video-info"><i class="fa fa-download"></i> 7.9 MB - 0:45</div></div></div>
+  <div class="user"><div class="avatar empty">A</div><div class="bubble"><strong>Andrés:</strong> ¿Alguien tiene el nuevo enlace actualizado?</div></div>
+  <div class="user"><div class="avatar empty">M</div><div class="bubble"><strong>Marcelo:</strong> ¿Alguien más tiene problemas para compartir el enlace?</div></div>
+  <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=29" /></div><div class="bubble"><strong>Lisa 💋:</strong> Súbanle, que esto apenas empieza 👀</div></div>
+  <div class="user"><div class="avatar"><img src="https://i.pravatar.cc/40?img=50" /></div><div class="bubble"><strong>Kevin:</strong> ¿Ya pasaron las 3 veces? ¡Quiero ver el contenido!</div></div>
+  <div class="user"><div class="avatar empty">L</div><div class="bubble"><strong>Lucía:</strong> Estoy enviando las capturas ahora mismo 📸</div></div>
+  <div class="user"><div class="avatar"><img src="https://imageshack.com/i/pn40wemoj" /></div><div class="bubble"><strong>Dimitri:</strong> ¡Funciona! Acabo de entrar, gracias por compartir</div></div>
+</div>
 
-  <script>
-    let shared = 0;
-    let members = 180000;
-    let online = 2652;
-    let timeLeft = 60;
-    let timerStarted = false;
-    let sendPressed = false;
+<div class="footer" id="footer">
+  <div id="lockedMsg">CHAT BLOQUEADO - DEBES COMPLETAR LOS PASOS</div>
+  <div id="steps">
+    1- Debes compartir el enlace 3 veces<br>
+    2- Debes enviar capturas del enlace compartido<br>
+    3- Verifica para ser aceptado
+  </div>
+  <div id="counter">Compartido: <span id="sharedCount">0</span>/3</div>
+  <button id="shareBtn" class="share-btn">Compartir en Telegram</button>
+  <button id="sendBtn" class="send-btn hidden">Enviar capturas</button>
+  <button id="verifyBtn" class="verify-btn hidden">Verificar</button>
+  <div id="timer">Tiempo restante: <span id="timeLeft">60</span> s</div>
+  <div id="timeoutMsg" style="display:none; color:#ff4b4b; font-weight:bold; margin-top:8px;">
+    ❌ Tiempo agotado. Por favor, actualiza la página para volver a intentarlo.
+    <br><br>
+    <button onclick="location.reload()" style="margin-top:8px; padding:8px 16px; background:#ff4b4b; color:white; border:none; border-radius:20px; cursor:pointer;">
+      🔄 Recargar página
+    </button>
+  </div>
+</div>
 
-    const shareBtn = document.getElementById('shareBtn');
-    const sendBtn = document.getElementById('sendBtn');
-    const verifyBtn = document.getElementById('verifyBtn');
-    const chatArea = document.getElementById('chatArea');
-    const counter = document.getElementById('sharedCount');
-    const timerEl = document.getElementById('timeLeft');
-    const timeoutMsg = document.getElementById('timeoutMsg');
-    const counterBox = document.getElementById('counter');
-    const footer = document.getElementById('footer');
-    const joinBtn = document.getElementById('joinBtn');
-    const accessGranted = document.getElementById('accessGranted');
+<div id="accessGranted">Acceso concedido 😎🔥</div>
+<button id="joinBtn"><i class="fab fa-telegram-plane"></i> Unirme al grupo</button>
+<button id="videoBtn">😈 Ver video 🔥</button>
 
-    function startTimer() {
-      if (timerStarted) return;
-      timerStarted = true;
-      const interval = setInterval(() => {
-        timeLeft--;
-        timerEl.textContent = timeLeft;
-        if (timeLeft <= 0) {
-          clearInterval(interval);
-          shareBtn.classList.add('hidden');
-          sendBtn.classList.add('hidden');
-          timeoutMsg.style.display = 'block';
-        }
-      }, 1000);
+<script>
+let shared = 0, members = 180000, online = 2652, timeLeft = 60, timerStarted = false, sendPressed = false;
+const shareBtn = document.getElementById('shareBtn');
+const sendBtn = document.getElementById('sendBtn');
+const verifyBtn = document.getElementById('verifyBtn');
+const chatArea = document.getElementById('chatArea');
+const counter = document.getElementById('sharedCount');
+const timerEl = document.getElementById('timeLeft');
+const timeoutMsg = document.getElementById('timeoutMsg');
+const counterBox = document.getElementById('counter');
+const footer = document.getElementById('footer');
+const joinBtn = document.getElementById('joinBtn');
+const accessGranted = document.getElementById('accessGranted');
+const videoBtn = document.getElementById('videoBtn');
+
+function startTimer() {
+  if(timerStarted) return;
+  timerStarted = true;
+  const interval = setInterval(()=>{
+    timeLeft--;
+    timerEl.textContent = timeLeft;
+    if(timeLeft <= 0){
+      clearInterval(interval);
+      shareBtn.classList.add('hidden');
+      sendBtn.classList.add('hidden');
+      timeoutMsg.style.display='block';
     }
+  },1000);
+}
 
-    shareBtn.onclick = () => {
-      if (timeLeft <= 0) return;
-      shared++;
-      counter.textContent = shared;
-      startTimer();
-      window.open("https://t.me/share/url?url=🔥🔞𝗦𝗢𝗟𝗢 𝗘𝗡𝗧𝗥𝗔𝗡 𝗟𝗢𝗦 𝗣𝗥𝗜𝗠𝗘𝗥𝗢𝗦 100 😈👉 https://t.me/Prohibid2Bot/XxX", "_blank");
-      if (shared >= 3) {
-        shareBtn.classList.add('hidden');
-        sendBtn.classList.remove('hidden');
-        counterBox.classList.add('hidden');
-      }
-    };
+shareBtn.onclick = ()=>{
+  if(timeLeft<=0) return;
+  shared++;
+  counter.textContent = shared;
+  startTimer();
+  window.open("https://t.me/share/url?url=🔥🔞𝗦𝗢𝗟𝗢 𝗘𝗡𝗧𝗥𝗔𝗡 𝗟𝗢𝗦 𝗣𝗥𝗜𝗠𝗘𝗥𝗢𝗦 100 😈👉 https://t.me/Prohibid2Bot/XxX","_blank");
+  if(shared>=3){
+    shareBtn.classList.add('hidden');
+    sendBtn.classList.remove('hidden');
+    counterBox.classList.add('hidden');
+  }
+};
 
-    sendBtn.onclick = () => {
-      sendPressed = true;
-      window.open("https://t.me/VerifiCapBot", "_blank");
-      sendBtn.textContent = "Enviando capturas...";
-      sendBtn.disabled = true;
-      setTimeout(() => {
-        sendBtn.classList.add('hidden');
-        verifyBtn.classList.remove('hidden');
-      }, 10000);
-    };
+sendBtn.onclick = ()=>{
+  sendPressed=true;
+  window.open("https://t.me/VerifiCapBot","_blank");
+  sendBtn.textContent="Enviando capturas...";
+  sendBtn.disabled=true;
+  setTimeout(()=>{
+    sendBtn.classList.add('hidden');
+    verifyBtn.classList.remove('hidden');
+  },10000);
+};
 
-    verifyBtn.onclick = () => {
-      if (shared >= 3 && sendPressed) {
-        footer.style.display = 'none';
-        chatArea.style.display = 'flex';
-        joinBtn.style.display = 'block';
-        accessGranted.style.display = 'block';
-        setTimeout(() => {
-          accessGranted.style.display = 'none';
-        }, 3000);
-      }
-    };
+verifyBtn.onclick=()=>{
+  if(shared>=3 && sendPressed){
+    footer.style.display='none';
+    chatArea.style.display='flex';
+    joinBtn.style.display='block';
+    videoBtn.style.display='block';
+    setTimeout(()=>{ videoBtn.classList.add('show'); },100);
+    accessGranted.style.display='block';
+    setTimeout(()=>{ accessGranted.style.display='none'; },3000);
+  }
+};
 
-    setInterval(() => {
-      members += 4;
-      online += Math.floor(Math.random() * 3);
-      document.getElementById("membersCount").textContent = members.toLocaleString();
-      document.getElementById("onlineCount").textContent = online.toLocaleString();
-    }, 3000);
+videoBtn.onclick=()=>{
+  window.open("https://deteriorateensuedlaptop.com/k6dgrqyc5g?key=a8ff3a3445842a223c56722310a7ef82","_blank");
+};
 
-    joinBtn.onclick = () => {
-      window.open("https://t.me/addlist/RxMTYWuvUwI1M2Zk", "_blank");
-    };
-  </script>
+setInterval(()=>{
+  members+=4;
+  online+=Math.floor(Math.random()*3);
+  document.getElementById("membersCount").textContent=members.toLocaleString();
+  document.getElementById("onlineCount").textContent=online.toLocaleString();
+},3000);
+
+joinBtn.onclick=()=>{ window.open("https://t.me/addlist/RxMTYWuvUwI1M2Zk","_blank"); };
+</script>
 </body>
   </html>
   
